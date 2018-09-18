@@ -8,7 +8,7 @@ ADDRESS = '4edadac9093d9326ee4b17f869b14f1a2534f96f9c5d7b48dc9acaed'
 # Test Block hash (Genesis)
 BLOCK_HASH = '7a0f384876aca3871adbde8622a87f8b971ede0ed8ee10425e3958a1'
 
-# Test nonces
+# Test nonces and matching diff
 NONCES = {
     "legacy": {'5ead736b0456eee16a99edbbe5f8f2a0': 53,
                'a741a704541d0481c36356d1f7a5aa1d': 53,
@@ -24,5 +24,14 @@ NONCES = {
                'c99235911b9858b9e887110f4b640a66': 53,
                'fba25c1dddb2ca9b9c709639d820438e': 53,
                '8550fe9fde36584bcb3e7168aa2f7eb6': 53},
-    "heavy1": {}
-}
+
+    "heavy1": {'4a94ef265a682330e9d0d331aca248bc': 52,
+               '20b16af74ce134246098f047c61de099': 57,
+               'de9f51522185677d6f10fae2af64113b': 57,
+               '04365bf049c897b344a9e1b2b6faa6df': 60,
+               'd63d6478c4113ccb842619a6ca52e1d9': 57,
+               'ea9f41ae3a123982e6245ee71cf7fdfd': 60,
+               '1f22e8a67dade1c405f0ab440fc1d973': 60,
+               '38941507759f5dc76aa6fb0df84b4d67': 63}
+    }
+
