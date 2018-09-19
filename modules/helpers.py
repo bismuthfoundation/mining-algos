@@ -67,6 +67,21 @@ def diffme_heavy1_full(map, pool_address, nonce, db_block_hash):
     return diff_result
 
 
+def diffme_heavy2(map, pool_address, nonce, db_block_hash):
+    # minimum possible diff
+    diff = 1
+    diff_result = 0
+    hash = sha224((pool_address + nonce + db_block_hash).encode("utf-8")).digest()
+    hash = int.from_bytes(hash, 'big')
+    annealed_sha = annealing.anneal_hash(map, hash)
+    bin_annealed_sha = bin_convert(annealed_sha)
+    mining_condition = bin_convert(db_block_hash)
+    while mining_condition[:diff] in bin_annealed_sha:
+        diff_result = diff
+        diff += 1
+    return diff_result
+
+
 def diffme_legacy_pp(pool_address, nonce, db_block_hash):
     # minimum possible diff
     diff = 1

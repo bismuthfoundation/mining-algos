@@ -63,3 +63,11 @@ def check_block(block_height_new, miner_address, nonce, db_block_hash, diff0, re
         raise ValueError ("Difficulty too low for block {} from {}, should be at least {}"
                           .format(block_height_new, peer_ip, diff0))
     return diff_save
+
+
+def mining_open():
+    pass
+
+
+def mining_close():
+    pass

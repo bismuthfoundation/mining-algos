@@ -2,6 +2,10 @@
 Test vectors for Bismuth PoW mining
 """
 
+
+__version__ = '0.0.2'
+
+
 # Test address (Genesis)
 ADDRESS = '4edadac9093d9326ee4b17f869b14f1a2534f96f9c5d7b48dc9acaed'
 
@@ -25,13 +29,36 @@ NONCES = {
                'fba25c1dddb2ca9b9c709639d820438e': 53,
                '8550fe9fde36584bcb3e7168aa2f7eb6': 53},
 
-    "heavy1": {'4a94ef265a682330e9d0d331aca248bc': 52,
+    "heavy1-old": {'4a94ef265a682330e9d0d331aca248bc': 52,
                '20b16af74ce134246098f047c61de099': 57,
                'de9f51522185677d6f10fae2af64113b': 57,
                '04365bf049c897b344a9e1b2b6faa6df': 60,
                'd63d6478c4113ccb842619a6ca52e1d9': 57,
                'ea9f41ae3a123982e6245ee71cf7fdfd': 60,
                '1f22e8a67dade1c405f0ab440fc1d973': 60,
-               '38941507759f5dc76aa6fb0df84b4d67': 63}
+               '38941507759f5dc76aa6fb0df84b4d67': 63},
+
+    "heavy1": {},
+
+    "heavy2": {'fe29e15dcc7c65e05a3bd3cafc20ea9d': 52,
+               'abcfd68fa8ce06a6889b6a6514efb45e': 53,
+               'c60c26ea06aa3419fdee722e9a37dd3b': 54,
+               'c35eb5707cd5465edf07beda747b2394': 54,
+               '3a4df9b4ae1e3ec6cb6f377ce57ba72b': 53,
+               '4c1cfba931716d80e32404d985cd4717': 52,
+               'dcf3452b89d48cbd32bc1eb05044a3a2': 52,
+               '2eadfddb3e959c9709342b77a29e2d82': 54,
+               '0c03c050b8bc270f7af0d779ce26d1b1': 53,
+               '856de8919191918952949b5f0eeaaf18': 53,
+               '735de24cf32f7d91258c9bf958f96aa1': 53,
+               'e7bbe22a02a7d88302bd81b9440ffd11': 54,
+               'e13e1ad0ac35c3609bd3aaf39891e1fc': 53,
+               'c052798595fda907bf02df16fd777552': 55,
+               '98292fc31fc66948bdff33c20aabfce5': 53,
+               '87cea0531b4399b7fb26ab699833b08f': 54,
+               '1ba8022d3f85492d2389437a20162368': 60,
+               'ae372e7ebb221bc0a35d9dd50b9e8d7f': 60,
+               '4842e3a593b0b12fb5e7a203550d16b0': 60}
     }
+
 
