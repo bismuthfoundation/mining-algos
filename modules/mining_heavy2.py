@@ -4,7 +4,6 @@ Modularize the mining algo check
 From bismuth node
 """
 
-import hashlib
 import annealing
 from hashlib import sha224
 from quantizer import *
