@@ -23,6 +23,10 @@ def mmap_read():
             print(read_int_from_map(map, 0))  # 3001179434
             print(read_int_from_map(map, 10))  # 3440476437
             print(read_int_from_map(map, 1024))  # 2707377409
+            #
+            print("{:08x}".format(read_int_from_map(map, 0)))  # e1b8f000
+            print("{:08x}".format(read_int_from_map(map, 10)))  # ad584e8b
+            print("{:08x}".format(read_int_from_map(map, 1024)))  # 67df95a6
         # Don't forget map.close() if you don't use context managers.
 
 
@@ -33,4 +37,7 @@ if __name__ == '__main__':
 3001179434
 3440476437
 2707377409
+e1b8f000
+ad584e8b
+67df95a6
 """

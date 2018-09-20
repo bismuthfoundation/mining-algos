@@ -2,6 +2,7 @@
 import mmap
 import os
 import struct
+import sys
 
 __version__ = '0.0.3'
 
@@ -122,6 +123,24 @@ def anneal_hash(mmap, n):
     return res
 
 
+def anneal_hash_test(mmap, n):
+    """
+    Converts 224 bits number into annealed version, hexstring
+
+    :param n: a 224 = 7x32 bits
+    :return:  56 char in hex encoding.
+    """
+    res = ''
+    Fvalue = struct.unpack('I', mmap[1024:1028])[0]
+    for i in range(7):
+        part = n & 0xffffffff
+        n = n >> 32
+        value = part ^ Fvalue
+        # difference with anneal224: keep word order.
+        res = "{:08x}".format(value) + res
+    return res
+
+
 def anneal_hash_verbose(mmap, n):
     """
     Converts 224 bits number into annealed version, hexstring
@@ -140,6 +159,59 @@ def anneal_hash_verbose(mmap, n):
         value = part ^ struct.unpack('I', mmap[4 * index:4 * index + 4])[0]
         print("v {:08x}".format(value))
         # difference with anneal224: keep word order.
+        res = "{:08x}".format(value) + res
+    return res
+
+
+def anneal3(mmap, n):
+    """
+    Converts 224 bits number into annealed version, hexstring
+
+    :param n: a 224 = 7x32 bits
+    :return:  56 char in hex encoding.
+    """
+    h7 = n & 0xffffffff
+    n = n >> 32
+    index = ((h7 & ~0x7) % RND_LEN) * 4
+    f1 = struct.unpack('I', mmap[index:index + 4])[0]
+    value = h7 ^ struct.unpack('I', mmap[index:index + 4])[0]
+    res = "{:08x}".format(value)
+    for i in range(6):
+        index += 4
+        h = n & 0xffffffff
+        n = n >> 32
+        value = h ^ struct.unpack('I', mmap[index:index + 4])[0]
+        res = "{:08x}".format(value) + res
+    return res
+
+
+def anneal3_verbose(mmap, n):
+    """
+    Converts 224 bits number into annealed version, hexstring
+
+    :param n: a 224 = 7x32 bits
+    :return:  56 char in hex encoding.
+    """
+    print("n {:032x}".format(n))
+
+    h7 = n & 0xffffffff
+    n = n >> 32
+    index = ((h7 & ~0x7) % RND_LEN)
+    print("h7 {:08x}".format(h7))
+    print("index {:08x}".format(index))
+    f1 = struct.unpack('I', mmap[4 * index:4 * index + 4])[0]
+    print("F7 {:08x}".format(f1))
+    value = h7 ^ struct.unpack('I', mmap[4 * index:4 * index + 4])[0]
+    print("v7 {:08x}".format(value))
+    res = "{:08x}".format(value)
+    for i in range(6):
+        index += 1
+        h = n & 0xffffffff
+        n = n >> 32
+        print("h {:08x}".format(h))
+        print("index {:08x}".format(index))
+        value = h ^ struct.unpack('I', mmap[4 * index:4 * index + 4])[0]
+        print("v {:08x}".format(value))
         res = "{:08x}".format(value) + res
     return res
 

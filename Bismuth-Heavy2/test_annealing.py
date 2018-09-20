@@ -21,6 +21,7 @@ if __name__ == '__main__':
     # memory-map the file, size 0 means whole file
     MMAP = mmap.mmap(F.fileno(), 0)
     annealing.RND_LEN = os.path.getsize(MAP) // 4
+    print("RND_LEN", annealing.RND_LEN)
     try:
         test = annealing.anneal224_verbose(MMAP, 0x7a0f384876aca3871adbde8622a87f8b971ede0ed8ee10425e3958a1)
         print("old", test)
