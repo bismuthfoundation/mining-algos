@@ -75,3 +75,11 @@ Next HN required update - To be announced - will not work with older nodes.
 Blame the greedy solo miner who took 60% + of the hash with huge fpga mining op.    
 That was a threat we can not ignore.  
 On the mid and long term, we will kinda re-introduce legacy bismuth mining, your work won't be lost. 
+
+## Where can I find a tech description of the new algo?
+See heavy3_mining_algo.pdf and this repo https://github.com/bismuthfoundation/mining-algos
+
+## What is that "Junction Noise" file at startup?
+The new memory heavy algorithm relies on a big file.  
+This file is generated once at node start if it does not exists yet.    
+This will need about 3 minutes, only once.
