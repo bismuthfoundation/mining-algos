@@ -20,9 +20,9 @@ def mmap_read():
         with mmap.mmap(f.fileno(), 0) as map:
             # https: // docs.python.org / 3 / library / mmap.html
             # read content via slice notation
-            print(read_int_from_map(map, 0))  # 3001179434
-            print(read_int_from_map(map, 10))  # 3440476437
-            print(read_int_from_map(map, 1024))  # 2707377409
+            print(read_int_from_map(map, 0))  # 3786993664
+            print(read_int_from_map(map, 10))  # 2908245643
+            print(read_int_from_map(map, 1024))  # 1742706086
             #
             print("{:08x}".format(read_int_from_map(map, 0)))  # e1b8f000
             print("{:08x}".format(read_int_from_map(map, 10)))  # ad584e8b
@@ -34,10 +34,11 @@ if __name__ == '__main__':
     mmap_read()
 
 """
-3001179434
-3440476437
-2707377409
+3786993664
+2908245643
+1742706086
 e1b8f000
 ad584e8b
 67df95a6
+
 """
