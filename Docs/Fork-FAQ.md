@@ -1,6 +1,6 @@
 # Bismuth PoW algorithm fork explained
 
-## Why?
+## Why?
 
 Lately, a solo miner with huge hash power was mining on Bismuth.  
 It's been confirmed that it's an FPGA mining operation, that has a way better Hash/Watt than GPUs.  
@@ -24,7 +24,7 @@ We have no issue either with a dedicated fpga miner that would mine Bis, be open
 But we can't accept a single op getting that much % of BIS.  
 Decentralization is a core belief of crypto.
 
-## Emergency response
+## Emergency response
 
 What makes the fpga mining so efficient is that the legacy Bismuth Mining algo requires only processing power, but no memory.  
 After careful research and tests, I came up with a slight change to the current mining algo that:
@@ -53,7 +53,7 @@ This would also allow for faster algo changes should a similar situation arise a
 
 # FAQ
 
-## Fork block/Date?
+## Fork block/Date?
 
 Block #854660.  
 Means around Monday October 8, 14h UTC
@@ -76,10 +76,10 @@ Blame the greedy solo miner who took 60% + of the hash with huge fpga mining op.
 That was a threat we can not ignore.  
 On the mid and long term, we will kinda re-introduce legacy bismuth mining, your work won't be lost. 
 
-## Where can I find a tech description of the new algo?
+## Where can I find a tech description of the new algo?
 See heavy3_mining_algo.pdf and this repo https://github.com/bismuthfoundation/mining-algos
 
-## What is that "Junction Noise" file at startup?
+## What is that "Junction Noise" file at startup?
 The new memory heavy algorithm relies on a big file.  
 This file is generated once at node start if it does not exists yet.    
 This will need about 3 minutes, only once.
