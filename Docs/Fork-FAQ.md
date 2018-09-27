@@ -57,6 +57,12 @@ This would also allow for faster algo changes should a similar situation arise a
 
 Block #854660.  
 Means around Monday October 8, 14h UTC
+Official release: https://github.com/hclivess/Bismuth/releases/tag/4.2.7
+
+## I'm only using the wallet, no node. Should I update?
+You can, but if you only use the wallet and connect to an online wallet server, you don't need to hurry.  
+Your funds are safe anyway if you have a backup of the "wallet.der" file.  
+Nothing changes for you. You can update or not yet, your wallet still will work.
 
 ## I'm a miner, what should I do?
 Update your miners with compatible miners before the fork.  
@@ -68,8 +74,9 @@ If you don't, after the fork block your node will be kicked out of the official 
 
 ## I run a hypernode, what should I do?
 Update your node with version 4.2.7.0 or a later one, asap.  
-If you don't, after the fork block your node will be kicked out of the official network, and your HN will not work properly.    
-Next HN required update - To be announced - will not work with older nodes.
+If you don't, after the fork block your node will be kicked out of the official network, and your HN will not work properly.   
+Next HN required update - To be announced - will not work with older nodes.  
+*You can Wait for the update procedure soon*
 
 ## I'm a FPGA dev and spent 1 month working on BIS, for nuts?
 Blame the greedy solo miner who took 60% + of the hash with huge fpga mining op.    
