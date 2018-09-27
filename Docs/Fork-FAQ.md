@@ -56,7 +56,7 @@ This would also allow for faster algo changes should a similar situation arise a
 ## Fork block/Date?
 
 Block #854660.  
-Means around Monday October 8, 14h UTC
+Means around Monday October 8, 14h UTC  
 Official release: https://github.com/hclivess/Bismuth/releases/tag/4.2.7
 
 ## I'm only using the wallet, no node. Should I update?
