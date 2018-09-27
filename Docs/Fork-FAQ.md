@@ -4,7 +4,7 @@
 
 Lately, a solo miner with huge hash power was mining on Bismuth.  
 It's been confirmed that it's an FPGA mining operation, that has a way better Hash/Watt than GPUs.  
-The resulting hash - 60+% of the network, solo + pool - showed no mercy to the coin profitability, and is careless of the network: that solo miner does not even embed transactions in its blocks.  
+The resulting hash - 60+% of the network, solo + pool - showed no mercy to the coin profitability, and is careless of the network: that solo miner did not even embed transactions in its blocks.  
 
 This scenario is common among PoW coins: 
 - A big op comes and mines with a lot of hash.   
