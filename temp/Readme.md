@@ -2,7 +2,7 @@
 
 On October 8, 2018 (block height 854,660) a new and novel mining algorithm was introduced on the Bismuth network. Previously the Bismuth mining algorithm was computationally expensive, but required little memory. In order to make the new mining algorithm more resistant to FPGAs and ASICs, a requirement to hold a 1GB random binary file in memory was introduced, as illustrated with the yellow boxes in the chart below:  
 
-<img src="Bismuth-anneal.jpg" alt="New Bismuth mining algo">  
+<img src="Bismuth-anneal2.jpg" alt="New Bismuth mining algo">  
 
 Before the new mining algorithm was introduced the distribution of the hashrate among the pools was as shown below:  
 <img src="pools-854660.jpg" alt="Pools before the fork">  
