@@ -59,4 +59,12 @@ This is then a generic tweak that can be applied instantly to any other crypto.
   We underestimated the hash, but the system worked well: diff dropped, and the algo then reached stability in a few days only.
   
   
-
+# various
+Several interesting angles we can work on:
+- the story itself. "We survived an deadly attack, here is how we did"
+- what, in what is specific to bismuth, helped us
+   * the diff algo
+   * ability to fork fast
+   * reactive community (pools, exchanges and third part services  who updated fast)
+   * the internal know how to design an effective counter attack
+- how this can be of use to other cryptos: the heavy algo "add on" as a generic solution to cheap fpga mining.
