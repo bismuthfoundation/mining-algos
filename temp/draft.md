@@ -25,7 +25,7 @@ The constraints:
 - Needs only minimal change to current GPU miners, so it can be implemented quickly by pools
 - Introduce some memory bandwith limit so high end fpgas withh ddr4 still can mine, but do not have a 10x performance advantage.
 
-## Bismuth Heavy3
+## Bismuth Heavy3
 
 See the docs with slides and pdf
 https://github.com/bismuthfoundation/mining-algos/blob/master/Docs/
