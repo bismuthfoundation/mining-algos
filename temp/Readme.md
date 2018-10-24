@@ -11,8 +11,7 @@ The presence of a large FPGA miner was identified independently by several indep
 
 The FPGA operation was alternating between mining on his own account and using Pool 4 in the figure above. It is believed that a very large portion of the hashrate by Pool 4 shown in the chart above was contributed by the FPGA miner operation. After the hypernodes had been successfully launched, the core dev team had to act swiftly, and an evolution of the mining algorithm moved to the top of the priority list, even though this had not been placed on the roadmap which was published a few months earlier. The modified mining algorithm was developed and tested on a private testnet in record time during September 2018. It took less than 3 weeks from the first conceptual ideas until launch of the new mining algorithm. Even with this rapid pace of development, the exchanges and the pools were given 1 week's notice and time to update their nodes.
 
-What made the FPGA mining so efficient was the fact that the legacy Bismuth Mining algo required only processing power, but no memory.  
-After careful research and tests, one of the core devs, EggdraSyl, came up with a slight change to the current mining algo that:
+What made the FPGA mining so efficient was the fact that the legacy Bismuth Mining algo required only processing power, but no memory. After careful research and tests, one of the core devs, EggdraSyl, came up with a slight change to the current mining algo that:
 - Is memory hard
 - Would block or penalize the specific FPGA miner a lot
 - Still is fast to verify on nodes
@@ -38,8 +37,7 @@ Since it was expected that about 50% of the hashrate would disappear after the h
 
 ## Bismuth Heavy3
 
-The idea behind the "Heavy3" algo designed by EggdraSyl is both simple and effective:  
-It requires a read from a random offset in a fixed lookup table, for each tested nonce.
+The idea behind the "Heavy3" algo designed by EggdraSyl is both simple and effective: It requires a read from a random offset in a fixed lookup table, for each tested nonce.
 
 This concept can be applied to any other mining algorithm as an additional layer to protect against a similar attack.
 If the matching algorithm uses hashcash or not (bismuth does not) is irrelevant. The final hash state that is tested is a vector of 32 bits words. Since it's a hash result, it can be considered as a random vector, it can contain anything, and you can not reverse the process - this is a hash core property -
